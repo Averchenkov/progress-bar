@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progress Bar</title>
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/progress.css">
+    <script type="module" src="./js/main.js" defer></script>
+</head>
+<body>
+  <div class="container">
+    <span class="container__title">Progress</span>
+    <div class="container__item">
+      <svg id="progress-bar" class="progress-bar hidden" width="150" height="150">
+        <circle
+          class="progress-bar__ring progress-bar__ring_shadow"
+          cx="75"
+          cy="75"
+          r="64"
+        />
+        <circle
+          class="progress-bar__ring progress-bar__ring_track"
+          id="progress"
+          cx="75"
+          cy="75"
+          r="64"
+        />
+      </svg>
+    </div>
+    <div class="container__item control-panel">
+      <div class="control-panel__item">
+        <input 
+          type="number"
+          id="input-value"
+          class="input-value" 
+          min="0"
+          max="100"
+          value="0"
+          oninput="this.value=this.value.replace(/[^0-9]/g,'')"
+        />
+        <label for="input-value">Value</label>
+      </div>
+      <div class="control-panel__item">
+        <input type="checkbox" id="toggle-animate" class="toggle">
+        <label for="toggle-animate">Animate</label>
+      </div>
+      <div class="control-panel__item">
+        <input type="checkbox" id="toggle-hide" class="toggle">
+        <label for="toggle-hide">Hide</label>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

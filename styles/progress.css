@@ -1,0 +1,35 @@
+.progress-bar {
+}
+
+.progress-bar__ring {
+    transform-origin: center;
+    transform: rotate(-90deg);
+    transition: stroke-dashoffset 0.6s;
+    stroke-width: 12;
+    fill: transparent;
+}
+
+.progress-bar__ring_shadow {
+    stroke: var(--light-blue, #dae6ec);
+}
+
+.progress-bar__ring_track {
+    stroke: var(--blue, #005cff);
+} 
+
+.progress-bar.hidden {
+    display: none;
+}
+
+@keyframes rotating {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.progress-bar.animated {
+    animation: rotating 2s linear infinite;
+}
