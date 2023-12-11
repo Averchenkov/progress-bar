@@ -1,4 +1,6 @@
 .progress-bar {
+    opacity: 1;
+    transition: opacity 0.3s ;
 }
 
 .progress-bar__ring {
@@ -18,8 +20,9 @@
 } 
 
 .progress-bar.hidden {
-    display: none;
+    opacity: 0;
 }
+
 
 @keyframes rotating {
     from {
