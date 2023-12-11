@@ -36,6 +36,7 @@ html {
     font-weight: 600;
     color: var(--text, black);
     background: var(--background, white);
+    -webkit-tap-highlight-color: transparent;
 }
 
 body {
